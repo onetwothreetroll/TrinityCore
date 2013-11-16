@@ -46,7 +46,7 @@
 #include "World.h"
 #include "WorldPacket.h"
 #include "WorldSession.h"
-
+#include <Config.h>
 
 class LoginQueryHolder : public SQLQueryHolder
 {
@@ -1005,7 +1005,7 @@ void WorldSession::HandlePlayerLogin(LoginQueryHolder* holder)
         SendNotification(LANG_RESET_TALENTS);
     }
 
-    if (pCurrChar->HasAtLoginFlag(AT_LOGIN_FIRST))
+    if (pCurrChar->HasAtLoginFlag(AT_LOGIN_FIRST) && !sConfigMgr->GetBoolDefault("FirstLogin.FlagEnable", false))
         pCurrChar->RemoveAtLoginFlag(AT_LOGIN_FIRST);
 
     // show time before shutdown if shutdown planned.

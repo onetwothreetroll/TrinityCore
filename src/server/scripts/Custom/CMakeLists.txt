@@ -10,6 +10,7 @@
 
 set(scripts_STAT_SRCS
   ${scripts_STAT_SRCS}
+  Custom/player_first_login_announce.cpp
 )
 
 message("  -> Prepared: Custom")

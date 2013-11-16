@@ -2816,3 +2816,16 @@ PacketSpoof.BanDuration = 86400
 
 #
 ###################################################################################################
+
+###################################################################################################
+# FirstLogin
+
+FirstLogin.FlagEnable = 1
+FirstLogin.Announce = 1
+
+# printf-like format: "... %s ..."
+FirstLogin.GloabalAnnounceFormatString = "Hello, %s!"
+FirstLogin.PlayerAnnounceFormatString = "%s, Hello!"
+
+#
+###################################################################################################
